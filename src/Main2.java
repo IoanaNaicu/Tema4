@@ -24,14 +24,30 @@ public class Main2 {
                     double money = in.nextDouble();
                     refuel1.addPetrol(petrol);
                     refuel1.addMoney(money);
-                    System.out.println("You have chosen to refuel with " + refuel1.getNewPetrol() + " liters of petrol and you have " + refuel1.getNewMoney()+ "$");
-                    break;
+                    System.out.println("You have chosen to refuel with " + refuel1.getPetrol() + " liters of petrol and you have " + refuel1.getMoney()+ "$");
+                   // break;
                 case 'b':
                     System.out.println("You chose to exit");
                     //refuel1.pay();
                     stayInLoop = false;
 
             }
+
+//            while(input == 'a') {
+//                    System.out.println("You chose to refuel");
+//                    System.out.println("Insert liters of petrol:");
+//                    //Refuel refuel1 = new Refuel(0,0);
+//                    double petrol = in.nextDouble();
+//                    System.out.println("Insert money:");
+//                    double money = in.nextDouble();
+//                    refuel1.addPetrol(petrol);
+//                    refuel1.addMoney(money);
+//                    System.out.println("You have chosen to refuel with " + refuel1.getPetrol() + " liters of petrol and you have " + refuel1.getMoney()+ "$");
+//
+//            }
+//            refuel1.pay();
+//            stayInLoop = false;
+
         }
 
 

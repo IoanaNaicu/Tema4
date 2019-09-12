@@ -2,8 +2,7 @@ public class Refuel {
     private double petrol;
     private double money;
     private final int literOfPetrolPrice = 5;
-    private double newPetrol;
-    private double newMoney;
+
 
     public Refuel(double pretrol, double money) {
         this.petrol = pretrol;
@@ -27,25 +26,18 @@ public class Refuel {
     }
 
 
-    public void addPetrol(double petrol){
-        newPetrol =  this.petrol + petrol;
+    public void addPetrol(double petrol) {
+
+        this.petrol += petrol;
     }
 
-    public double getNewPetrol(){
-        return newPetrol;
+    public void addMoney(double money) {
+
+        this.money += money;
     }
 
-
-    public void addMoney(double money){
-        newMoney = this.money + money;
-    }
-
-    public double getNewMoney(){
-        return newMoney;
-    }
-
-    public void pay(){
-        double moneyRequired = petrol*literOfPetrolPrice;
+    public void pay() {
+        double moneyRequired = petrol * literOfPetrolPrice;
         if (money > moneyRequired) {
             double rest = money - moneyRequired;
             System.out.println("Your rest is " + rest);
