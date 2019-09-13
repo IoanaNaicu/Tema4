@@ -122,14 +122,13 @@ public class Biblioteca {
         for (Books b : booksReturned) {
             booksRating.add(b.getRating());
         }
-            Double i = Collections.max(booksRating);
-            booksRating.clear();
-            booksRating.add(i);
+        Double i = Collections.max(booksRating);
 
-            for() {
+        for (Books b : booksReturned) {
+            if (b.getRating() == i)
                 System.out.println("Cartea cu cel mai mare rating scrisa de autorul ales este: " + b.getName());
 
-            }
+        }
 
     }
 
