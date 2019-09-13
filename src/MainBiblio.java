@@ -18,8 +18,10 @@ public class MainBiblio {
             System.out.println("d) adauga carti");
             System.out.println("e) printeaza carti");
             System.out.println("f) sterge carti");
-            System.out.println("g) exit");
-            while (!in.hasNext("[abcdefg]")) {
+            System.out.println("g) cauta carti dupa autor");
+            System.out.println("h) cauta cartea cea mai bine cotata dupa autor");
+            System.out.println("i) exit");
+            while (!in.hasNext("[abcdefghi]")) {
                 System.out.println("Not from list. Chose another option");
                 in.next();
             }
@@ -64,9 +66,19 @@ public class MainBiblio {
                 case 'f':
                     System.out.println("Introduceti numele cartii care doriti sa o stergi din lista: ");
                     String bookToRemove = in.next();
-                    b1.removeAuthors(bookToRemove);
+                    b1.removeBooks(bookToRemove);
                     break;
                 case 'g':
+                    System.out.println("Introduceti numele autorului ale carui carti vreti sa vizualizati ");
+                    String nameAuthorSearchForBooks = in.next();
+                    b1.returnBook(nameAuthorSearchForBooks);
+                    break;
+                case 'h':
+                    System.out.println("Introduceti numele autorului a carui cea mai cotata carte doriti sa vizualizati ");
+                    String nameAuthorSearchForHighestBook = in.next();
+                    b1.returnBookHighestRating(nameAuthorSearchForHighestBook);
+                    break;
+                case 'i':
                     System.out.println("you exit");
                     stayInLoop = false;
 

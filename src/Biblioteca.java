@@ -1,4 +1,6 @@
+import java.awt.print.Book;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Biblioteca {
@@ -71,10 +73,11 @@ public class Biblioteca {
         myBooks.add(myBook);
     }
 
-    public void removeBook(String name) {
+    public void removeBooks(String bookName) {
         List<Books> deleteBooks = new ArrayList<>();
+
         for (Books b : myBooks) {
-            if (b.getName().equals(name)) {
+            if (b.getName().equals(bookName)) {
                 deleteBooks.add(b);
             }
         }
@@ -82,13 +85,57 @@ public class Biblioteca {
         for (Books deleteBook : deleteBooks) {
             myBooks.remove(deleteBook);
         }
+    }
 
+    public void returnBook(String name) {
+        String searchForAuthor = "a";
+        //List<String> searchForAuthor = new ArrayList<>();
+        List<Books> booksReturned = new ArrayList<>();
+        for (Author a : myAuthors) {
+            if (a.getName().equals(name))
+                searchForAuthor = a.getName();
+        }
+        for (Books b : myBooks) {
+            if (b.getMyList().getName().equals(searchForAuthor))
+                booksReturned.add(b);
+        }
+        System.out.println("Cartile scrise de autorul ales sunt: ");
+        for (Books b : booksReturned) {
+            System.out.println(b.getName());
+        }
+    }
+
+    public void returnBookHighestRating(String name) {
+        String searchForAuthor = "a";
+        //List<String> searchForAuthor = new ArrayList<>();
+        List<Books> booksReturned = new ArrayList<>();
+        List<Double> booksRating = new ArrayList<>();
+        for (Author a : myAuthors) {
+            if (a.getName().equals(name))
+                searchForAuthor = a.getName();
+        }
+        for (Books b : myBooks) {
+            if (b.getMyList().getName().equals(searchForAuthor))
+                booksReturned.add(b);
+        }
+
+        for (Books b : booksReturned) {
+            booksRating.add(b.getRating());
+        }
+            Double i = Collections.max(booksRating);
+            booksRating.clear();
+            booksRating.add(i);
+
+            for() {
+                System.out.println("Cartea cu cel mai mare rating scrisa de autorul ales este: " + b.getName());
+
+            }
 
     }
 
 
     public void printBooksList() {
-        System.out.println("Lista de carti contine urmatorele: ");
+        System.out.println("Lista de carti contine urmatoarele: ");
         for (Books b : myBooks) {
             System.out.println(b);
         }
