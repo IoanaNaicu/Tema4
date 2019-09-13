@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2367bec1-355a-4eea-981e-1f72471fcdcb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/Tema4/Biblioteca.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema4/Biblioteca.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Biblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainBiblio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainBiblio.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -132,7 +132,6 @@ public class Biblioteca {
 
     }
 
-
     public void printBooksList() {
         System.out.println("Lista de carti contine urmatoarele: ");
         for (Books b : myBooks) {

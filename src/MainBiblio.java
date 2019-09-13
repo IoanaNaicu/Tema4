@@ -11,7 +11,7 @@ public class MainBiblio {
         Scanner in = new Scanner(System.in);
         boolean stayInLoop = true;
         while (stayInLoop) {
-            System.out.println("choose an option:");
+            System.out.println("Alege o optiune:");
             System.out.println("a) adauga autori");
             System.out.println("b) printeaza lista autorilor");
             System.out.println("c) sterge autori");
@@ -22,7 +22,7 @@ public class MainBiblio {
             System.out.println("h) cauta cartea cea mai bine cotata dupa autor");
             System.out.println("i) exit");
             while (!in.hasNext("[abcdefghi]")) {
-                System.out.println("Not from list. Chose another option");
+                System.out.println("Nu ai ales din lista. Alege din nou!");
                 in.next();
             }
             Character input = in.next().charAt(0);
