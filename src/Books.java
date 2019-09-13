@@ -3,11 +3,14 @@ import java.util.List;
 public class Books {
     private String name;
     private  int numberOfPages;
-    private List<Author> myList;
+    //private List<Author> myList;
+    private double rating;
+    private Author myList;
 
-    public Books(String name, int numberOfPages, List<Author> myList) {
+    public Books(String name, int numberOfPages, double rating, Author myList) {
         this.name = name;
         this.numberOfPages = numberOfPages;
+        this.rating = rating;
         this.myList = myList;
     }
 
@@ -19,7 +22,11 @@ public class Books {
         return numberOfPages;
     }
 
-    public List<Author> getMyList() {
+    public double getRating() {
+        return rating;
+    }
+
+    public Author getMyList() {
         return myList;
     }
 
@@ -31,7 +38,17 @@ public class Books {
         this.numberOfPages = numberOfPages;
     }
 
-    public void setMyList(List<Author> myList) {
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
+    public void setMyList(Author myList) {
         this.myList = myList;
+    }
+
+    @Override
+    public String toString() {
+        return "Cartea se numeste " + name + ", are " + numberOfPages + " pagini, rating de " + rating +
+                " si este scrisa de " + myList.getName();
     }
 }

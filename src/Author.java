@@ -41,7 +41,7 @@ public class Author {
 
     @Override
     public String toString() {
-        //return "Author[name=" + name + ", email=" + email + ", gender=" + gender;
-        return name + "(" + gender + ")" + " at " + email;
+        return "Author[name=" + name + ", email=" + email + ", gender=" + gender + "]";
+        //return name + "(" + gender + ")" + " at " + email;
     }
 }

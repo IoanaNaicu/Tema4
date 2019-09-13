@@ -15,8 +15,11 @@ public class MainBiblio {
             System.out.println("a) adauga autori");
             System.out.println("b) printeaza lista autorilor");
             System.out.println("c) sterge autori");
-            System.out.println("f) exit");
-            while (!in.hasNext("[abcf]")) {
+            System.out.println("d) adauga carti");
+            System.out.println("e) printeaza carti");
+            System.out.println("f) sterge carti");
+            System.out.println("g) exit");
+            while (!in.hasNext("[abcdefg]")) {
                 System.out.println("Not from list. Chose another option");
                 in.next();
             }
@@ -39,10 +42,31 @@ public class MainBiblio {
                     break;
                 case 'c':
                     System.out.println("Introduceti numele autorului care doresti sa il stergi din lista: ");
-                    String nameToRemove = in.next();
-                    b1.removeAuthors(nameToRemove);
+                    String authorToRemove = in.next();
+                    b1.removeAuthors(authorToRemove);
+                    break;
+                case 'd':
+                    System.out.println("introdu nume carte:");
+                    String name1 = in.next();
+                    System.out.println("introdu numarul de pagini:");
+                    int noOfPages = in.nextInt();
+                    System.out.println("introdu rating-ul cartii:");
+                    double rating = in.nextDouble();
+                    System.out.println("Autorii disponibili sunt mai jos. Alege un nume:");
+                    b1.printAuthorsList();
+                    String authorName = in.next();
+                    Books myBook = b1.createBooks(name1, noOfPages, rating, b1.returnAuthor(authorName));
+                    b1.addBooks(myBook);
+                    break;
+                case 'e':
+                    b1.printBooksList();
                     break;
                 case 'f':
+                    System.out.println("Introduceti numele cartii care doriti sa o stergi din lista: ");
+                    String bookToRemove = in.next();
+                    b1.removeAuthors(bookToRemove);
+                    break;
+                case 'g':
                     System.out.println("you exit");
                     stayInLoop = false;
 
