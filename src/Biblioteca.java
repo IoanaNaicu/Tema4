@@ -34,10 +34,24 @@ public class Biblioteca {
         myAuthors.add(myAuthor);
     }
 
+    public void removeAuthors(String name){
+        List<Author> deleteAuthors = new ArrayList<>();
+
+        for (Author a: myAuthors){
+            if(a.getName().equals(name)) {
+                deleteAuthors.add(a);
+            }
+        }
+
+        for (Author deleteAuthor: deleteAuthors){
+            myAuthors.remove(deleteAuthor);
+        }
+    }
+
 
 
     public void printAuthorsList(){
-        System.out.println("Lista de autori contine urmatorii: ");
+        System.out.println("Listaa de autori contine urmatorii: ");
         for (Author a : myAuthors) {
             System.out.println(a);
         }

@@ -14,8 +14,9 @@ public class MainBiblio {
             System.out.println("choose an option:");
             System.out.println("a) adauga autori");
             System.out.println("b) printeaza lista autorilor");
+            System.out.println("c) sterge autori");
             System.out.println("f) exit");
-            while (!in.hasNext("[abf]")) {
+            while (!in.hasNext("[abcf]")) {
                 System.out.println("Not from list. Chose another option");
                 in.next();
             }
@@ -36,7 +37,11 @@ public class MainBiblio {
                 case 'b':
                     b1.printAuthorsList();
                     break;
-
+                case 'c':
+                    System.out.println("Introduceti numele autorului care doresti sa il stergi din lista: ");
+                    String nameToRemove = in.next();
+                    b1.removeAuthors(nameToRemove);
+                    break;
                 case 'f':
                     System.out.println("you exit");
                     stayInLoop = false;
